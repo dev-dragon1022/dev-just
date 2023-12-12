@@ -1,0 +1,216 @@
+html,body{
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: #483C6C;
+	overflow: hidden;
+}
+#app{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+}
+.bg{
+	width: 100%;
+	height: 100vh;
+	background: url(../imgs/imgs2048/bg.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	filter: blur(20px);
+	opacity: 0.7;
+}
+.holder2048 {
+	width: 284px;
+	height: 284px;
+	position: relative;
+	margin: 0 auto;
+}
+.holder2048>.container {
+	width: 280px;
+	height: 280px;
+	position: relative;
+	margin: 0 auto;
+	border-style: none;
+	border: 2px solid #BBADA0;
+	background-color: #CCC0B3;
+	box-shadow: 0 20px 40px rgba(255,33,124,.2);
+}
+.holder2048>.container>.mask {
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 2px solid #BBADA0;
+}
+.holder2048>.container>.box {
+	width: 66px;
+	height: 66px;
+	position: absolute;
+	font-size: 1.25rem;
+	font-weight: bold;
+	text-align: center;
+	line-height: 70px;
+}
+.holder2048>.container>.box[value='2'] {
+	background-color: #FFF8D7;
+	color: #776E65;
+}
+.holder2048>.container>.box[value='4'] {
+	background-color: #FFED97;
+	color: #776E65;
+}
+.holder2048>.container>.box[value='8'] {
+	background-color: #FFBB77;
+	color: #776E65;
+}
+.holder2048>.container>.box[value='16'] {
+	background-color: #FF9224;
+	color: #776E65;
+}
+.holder2048>.container>.box[value='32'] {
+	background-color: #FF5809;
+	color: #8E2E00;
+}
+.holder2048>.container>.box[value='64'] {
+	background-color: #EA0000;
+	color: #810000;
+}
+.holder2048>.container>.box[value='128'] {
+	background-color: #FFFF37;
+	color: #8D8D00;
+}
+.holder2048>.container>.box[value='256'] {
+	background-color: #E8CC42;
+	color: #806A00;
+}
+.holder2048>.container>.box[value='512'] {
+	background-color: #E1E100;
+	color: #787800;
+}
+.holder2048>.container>.box[value='1024'] {
+	background-color: #00C400;
+	color: #006D00;
+}
+.holder2048>.container>.box[value='2048'] {
+	background-color: #9AFF02;
+	color: #4C7E00;
+}
+.holder2048>.container>.box[value='4096'] {
+	background-color: #00FFFF;
+	color: #007E7E;
+}
+.holder2048>.container>.box[value='8192'] {
+	background-color: #AA0FD8;
+	color: #55006D;
+}
+.title-box{
+	position: relative;
+	padding: 16px 0;
+	display: flex;
+	align-items: center;
+}
+.title{
+	font-size: 1.625rem;
+	color: #ffffff;
+	text-align: center;
+}
+.help-info{
+	font-size: 0.75rem;
+	font-weight: bold;
+	color: #f00;
+	width: 1.125rem;
+	height: 1.125rem;
+	text-align: center;
+	background-color: #ffffff;
+	border-radius: 50%;
+	cursor: help;
+	margin-left: 0.625rem;
+	position: relative;
+}
+.help-info-box{
+	display: none;
+	position: relative;
+}
+.help-info-box:after{
+	content: '电脑端使用上下左右键操作';
+	width: 6rem;
+	padding: 4px 8px;
+	font-size: 0.75rem;
+	color: #ffffff;
+	background-color: rgba(0,0,0,0.4);
+	border-radius: 0.125rem;
+	position: absolute;
+	top: -20px;
+  left: 12px;
+	text-align: left;
+}
+.help-info-box:before{
+	content: '';
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-right: 8px solid rgba(0,0,0,0.4);
+	position: absolute;
+	top: -6px;
+  left: -2px;
+}
+.f5{
+	padding: 16px;
+	position: relative;
+	display: flex;
+}
+.f5-btn{
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	background: url(../imgs/imgs2048/f5.png) no-repeat center;
+	background-size: 100%;
+	box-shadow: 0 5px 15px rgba(255,33,124,.4);
+}
+.ewm-box,.ewm-box-2{
+	position: fixed;
+	top: 0;
+	right: 10.5rem;
+	padding: 0.625rem;
+	transform: translate(-50%,0);
+	background-color: #ffffff;
+	border-radius: 0 0 0.25rem 0.25rem;
+}
+.ewm-box-2{
+	right: 2.5rem;
+}
+.ewm-img{
+	width: 88px;
+	height: 88px;
+	display: inline-block;
+}
+.ewm-img img{
+	width: 100%;
+	border: none;
+}
+.ewm-text{
+	font-size: 0.75rem;
+	color: #ffffff;
+	padding: 5px 0;
+	text-align: center;
+	color: #333333;
+}
+.ewm-text p{
+	margin: 0;
+	padding: 0;
+}
+#start,#close{
+	cursor: pointer;
+}
+@media screen and (max-width:960px){
+	.help-info,.ewm-box,.ewm-box-2{
+		display: none;
+	}
+}

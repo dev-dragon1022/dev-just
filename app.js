@@ -1,6 +1,7 @@
 // by Just. Liu
 // v0.0.1
 
+
 const app = Vue.createApp({	
   data() {
     return {
@@ -24,4 +25,4 @@ const app = Vue.createApp({
   }
 })
 
-app.mount('#app')
+app.mount('#app');
