@@ -215,8 +215,8 @@
 				isGameOver = true;
 				// 游戏结束弹窗
 				var pop = "<div id='pop' style='width:100%;height:100vh;position:fixed;top:0;left:0;background-color:rgba(0,0,0,.4);z-index:999;'>"+
-								"<div style='width:250px;height:201px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius: 8px;background:url(./imgs/bg.png) no-repeat left bottom;background-size:100%;'>"+
-									"<div id='close' style='width:24px;height:24px;cursor:pointer;position:absolute;top:5px;right:5px;'><img style='width:100%;' src='./imgs/close.png' alt='关闭'></div>"+
+								"<div style='width:250px;height:201px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius: 8px;background:url(../imgs/imgs2048/bg.png) no-repeat left bottom;background-size:100%;'>"+
+									"<div id='close' style='width:24px;height:24px;cursor:pointer;position:absolute;top:5px;right:5px;'><img style='width:100%;' src='../imgs/imgs2048/close.png' alt='关闭'></div>"+
 									"<div style='width:100%;margin-top:30px;text-align:center;color:#FFFF00;text-shadow:0 5px 12px rgba(255,0,0,.7);font-size:30px;font-weight:bold;'>GAME OVER</div>"+
 									"<div id='start' onclick='javascript:location.reload();' style='width:160px;height:44px;line-height:44px;margin:35px auto;background-color:#00B837;color:#ffffff;font-size:20px;font-weight:bold;box-shadow: 0 5px 14px rgba(0,184,55,.4);text-align:center;border-radius: 8px;'>重新开始</div>"+
 								"</div>"+
