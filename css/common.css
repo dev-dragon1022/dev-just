@@ -46,6 +46,23 @@ ul,li{
 	font-size: 0.875rem;
 }
 /* dev code*/
+#app,header,main,section{
+	position: relative;
+}
+#app,section{
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+header{
+	width: 80px;
+	height: 100vh;
+	background: #fff;
+}
+main{
+	width: calc(100% - 80px);
+	height: 100%;
+}
 pre{
 	font-family: 'Noto Serif SC'!important;
 	position: relative;
