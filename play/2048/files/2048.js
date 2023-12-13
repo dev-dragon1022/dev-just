@@ -17,6 +17,30 @@
 		$(this).parents('#pop').remove();
 	});
 	
+	
+	/**
+	*声音开关*
+	**/
+	$('.volume-btn').click(function(){
+		if( $(this).hasClass('close') ){
+			$(this).addClass('open').removeClass('close');
+			closePlay();
+		}else{
+			$(this).addClass('close').removeClass('open');
+			startPlay();
+		}
+	})
+	//播放
+	function startPlay() {
+	    var myAudio = document.getElementById('my-audio');
+	    myAudio.play();
+	}
+	//暂停
+	function closePlay() {
+	    var myAudio = document.getElementById('my-audio');
+	    myAudio.pause();
+	}
+	
 	/* 开始摸鱼吧 */
 	var defaults = {
 		delay: 180 // 模块移动速度
@@ -159,9 +183,8 @@
 					isGameOver = true;
 					// 2048win 弹窗
 					var pop = "<div id='pop' style='width:100%;height:100vh;position:fixed;top:0;left:0;background-color:rgba(0,0,0,.4);z-index:999;'>"+
-									"<div style='width:250px;height:201px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius: 8px;background:url(files/bg.png) no-repeat left bottom;background-size:100%;'>"+
-										"<div id='close' style='width:24px;height:24px;cursor:pointer;position:absolute;top:5px;right:5px;'><img style='width:100%;' src='files/close.png' alt='关闭'></div>"+
-										"<div style='width:100%;margin-top:30px;text-align:center;color:#FFFF00;text-shadow:0 5px 12px rgba(255,0,0,.7);font-size:30px;font-weight:bold;'>GAME WIN</div>"+
+									"<div style='width:250px;height:201px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius: 8px;background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);'>"+
+										"<div style='width:100%;margin-top:30px;text-align:center;color:#ffffff;text-shadow:0 5px 12px rgba(0,0,0,.3);font-size:36px;font-weight:bold;'>胜 利</div>"+
 										"<div id='start' onclick='javascript:location.reload();' style='width:160px;height:44px;line-height:44px;margin:35px auto;background-color:#00B837;color:#ffffff;font-size:20px;font-weight:bold;box-shadow: 0 5px 14px rgba(0,184,55,.4);text-align:center;border-radius: 8px;'>再玩一次</div>"+
 									"</div>"+
 								"</div>";
@@ -217,10 +240,9 @@
 				isGameOver = true;
 				// 游戏结束弹窗
 				var pop = "<div id='pop' style='width:100%;height:100vh;position:fixed;top:0;left:0;background-color:rgba(0,0,0,.4);z-index:999;'>"+
-								"<div style='width:250px;height:201px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius: 8px;background:url(../files/bg.png) no-repeat left bottom;background-size:100%;'>"+
-									"<div id='close' style='width:24px;height:24px;cursor:pointer;position:absolute;top:5px;right:5px;'><img style='width:100%;' src='../files/close.png' alt='关闭'></div>"+
-									"<div style='width:100%;margin-top:30px;text-align:center;color:#FFFF00;text-shadow:0 5px 12px rgba(255,0,0,.7);font-size:30px;font-weight:bold;'>GAME OVER</div>"+
-									"<div id='start' onclick='javascript:location.reload();' style='width:160px;height:44px;line-height:44px;margin:35px auto;background-color:#00B837;color:#ffffff;font-size:20px;font-weight:bold;box-shadow: 0 5px 14px rgba(0,184,55,.4);text-align:center;border-radius: 8px;'>重新开始</div>"+
+								"<div style='width:250px;height:201px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius: 8px;background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);'>"+
+									"<div style='width:100%;margin-top:30px;text-align:center;color:#ffffff;text-shadow:0 5px 12px rgba(0,0,0,.3);font-size:36px;font-weight:bold;'>失 败</div>"+
+									"<div id='start' onclick='javascript:location.reload();' style='width:160px;height:44px;line-height:44px;margin:35px auto;background-color:#FC9B43;color:#ffffff;font-size:20px;font-weight:bold;box-shadow: 0 5px 14px rgba(252,155,67,0.4);text-align:center;border-radius: 8px;'>重新开始</div>"+
 								"</div>"+
 							"</div>";
 				$('body').append(pop);

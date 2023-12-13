@@ -18,11 +18,45 @@ html,body{
 .bg{
 	width: 100%;
 	height: 100vh;
-	background: url(../files/bg.png) no-repeat;
-	background-size: 100% 100%;
+	background-color: #FA8BFF;
+	background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
 	position: absolute;
 	filter: blur(20px);
-	opacity: 0.7;
+}
+.bg:before{
+	content: '';
+	width: 200px;
+	height: 200px;
+	border: 200px solid #ffffff;
+	border-radius: 50%;
+	position: absolute;
+	top: -200px;
+	left: -200px;
+	filter: blur(70px);
+	animation: bg-move 10s linear infinite;
+}
+.bg:after{
+	content: '';
+	width: 300px;
+	height: 300px;
+	background-color: #ffffff;
+	border-radius: 50%;
+	position: absolute;
+	bottom: -100px;
+	right: -100px;
+	filter: blur(70px);
+	animation: bg-move 16s linear infinite;
+}
+@keyframes bg-move{
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-150px);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
 .holder2048 {
 	width: 284px;
@@ -36,9 +70,11 @@ html,body{
 	position: relative;
 	margin: 0 auto;
 	border-style: none;
-	border: 2px solid #BBADA0;
-	background-color: #CCC0B3;
-	box-shadow: 0 20px 40px rgba(255,33,124,.2);
+	border: 2px solid #024482;
+	background-color: #024482;
+/* 	background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%); */
+	box-shadow: 0 5px 8px rgba(0,0,0,0.2);
+	border-radius: 6px;
 }
 .holder2048>.container>.mask {
 	width: 70px;
@@ -47,7 +83,9 @@ html,body{
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	border: 2px solid #BBADA0;
+	border: 2px solid #024482;
+	background-color: #005CA9;
+	border-radius: 9px;
 }
 .holder2048>.container>.box {
 	width: 66px;
@@ -57,58 +95,53 @@ html,body{
 	font-weight: bold;
 	text-align: center;
 	line-height: 70px;
+	border-radius: 7px;
+	
+	box-sizing: border-box;
 }
 .holder2048>.container>.box[value='2'] {
-	background-color: #FFF8D7;
-	color: #776E65;
+	background-color: #8E7BE7;
+	color: #ffffff;
 }
 .holder2048>.container>.box[value='4'] {
-	background-color: #FFED97;
-	color: #776E65;
+	background-color: #5BB0FF;
+	color: #ffffff;
 }
 .holder2048>.container>.box[value='8'] {
-	background-color: #FFBB77;
-	color: #776E65;
+	background-color: #FA65AD;
+	color: #ffffff;
 }
 .holder2048>.container>.box[value='16'] {
-	background-color: #FF9224;
-	color: #776E65;
+	background-color: #75DC63;
+	color: #ffffff;
 }
 .holder2048>.container>.box[value='32'] {
-	background-color: #FF5809;
-	color: #8E2E00;
+	background-color: #F4BC4C;
+	color: #ffffff;
 }
 .holder2048>.container>.box[value='64'] {
-	background-color: #EA0000;
-	color: #810000;
+	background-color: #2ECCDE;
+	color: #ffffff;
 }
 .holder2048>.container>.box[value='128'] {
-	background-color: #FFFF37;
-	color: #8D8D00;
+	background-color: #FF7C7B;
+	color: #ffffff;
 }
 .holder2048>.container>.box[value='256'] {
-	background-color: #E8CC42;
-	color: #806A00;
+	background-color: #EE8747;
+	color: #ffffff;
 }
 .holder2048>.container>.box[value='512'] {
-	background-color: #E1E100;
-	color: #787800;
+	background-color: #478BFF;
+	color: #ffffff;
 }
 .holder2048>.container>.box[value='1024'] {
-	background-color: #00C400;
-	color: #006D00;
+	background-color: #11B532;
+	color: #ffffff;
 }
 .holder2048>.container>.box[value='2048'] {
-	background-color: #9AFF02;
-	color: #4C7E00;
-}
-.holder2048>.container>.box[value='4096'] {
-	background-color: #00FFFF;
-	color: #007E7E;
-}
-.holder2048>.container>.box[value='8192'] {
-	background-color: #AA0FD8;
-	color: #55006D;
+	background-color: #5433FF;
+	color: #ffffff;
 }
 .title-box{
 	position: relative;
@@ -118,21 +151,35 @@ html,body{
 }
 .title{
 	font-size: 1.625rem;
-	color: #ffffff;
+	color: #0256A4;
+	font-weight: bold;
 	text-align: center;
 }
 .f5{
-	padding: 16px;
+	width: 284px;
+	padding-top: 24px;
 	position: relative;
 	display: flex;
+	justify-content: space-between;
 }
-.f5-btn{
+.f5-btn,.volume-btn{
 	width: 40px;
 	height: 40px;
-	border-radius: 100%;
-	background: url(../files/f5.png) no-repeat center;
-	background-size: 100%;
-	box-shadow: 0 5px 15px rgba(255,33,124,.4);
+	border-radius: 6px;
+	background-color: #FC9B43;
+	box-shadow: 0 5px 8px rgba(0,0,0,0.2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.volume-btn{
+	background-color: #94C100;
+}
+.close .close-icon{
+	display: none;
+}
+.open .open-icon{
+	display: none;
 }
 .ewm-box,.ewm-box-2{
 	position: fixed;
