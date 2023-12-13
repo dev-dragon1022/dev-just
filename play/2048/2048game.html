@@ -7,18 +7,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 		<title>2048小游戏</title>
-		<link rel="stylesheet" href="css/style2048.css">
+		<link rel="stylesheet" href="files/style2048.css">
 	</head>
 	<body>
 		<div id="app">
 			<audio autoplay loop>
-			  <source src="imgs/imgs2048/bgm.mp3" type="audio/mpeg">
+			  <source src="files/bgm.mp3" type="audio/mpeg">
 			</audio>
 			<div class="bg"></div>
 			<div class="title-box">
 				<span class="title">2048</span>
-				<span class="help-info">?</span>
-				<span class="help-info-box"></span>
 			</div>
 			<div class="container text-center" id="2048"></div>
 			<div class="f5">
@@ -35,7 +33,7 @@
 			</div>
 			<div class="ewm-box-2">
 				<div class="ewm-img">
-					<img src="imgs/imgs2048/hb.png" alt="设计师工作日常">
+					<img src="files/hb.png" alt="支付宝红包">
 				</div>
 				<div class="ewm-text">
 					<p>支付宝领红包</p>
@@ -46,7 +44,7 @@
 	</body>
 </html>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="js/2048.js"></script>
+<script src="files/2048.js"></script>
 <script>
 	$(document).ready(function(){
 		$("#2048").init2048();

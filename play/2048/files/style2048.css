@@ -18,7 +18,7 @@ html,body{
 .bg{
 	width: 100%;
 	height: 100vh;
-	background: url(../imgs/imgs2048/bg.png) no-repeat;
+	background: url(../files/bg.png) no-repeat;
 	background-size: 100% 100%;
 	position: absolute;
 	filter: blur(20px);
@@ -121,46 +121,6 @@ html,body{
 	color: #ffffff;
 	text-align: center;
 }
-.help-info{
-	font-size: 0.75rem;
-	font-weight: bold;
-	color: #f00;
-	width: 1.125rem;
-	height: 1.125rem;
-	text-align: center;
-	background-color: #ffffff;
-	border-radius: 50%;
-	cursor: help;
-	margin-left: 0.625rem;
-	position: relative;
-}
-.help-info-box{
-	display: none;
-	position: relative;
-}
-.help-info-box:after{
-	content: '电脑端使用上下左右键操作';
-	width: 6rem;
-	padding: 4px 8px;
-	font-size: 0.75rem;
-	color: #ffffff;
-	background-color: rgba(0,0,0,0.4);
-	border-radius: 0.125rem;
-	position: absolute;
-	top: -20px;
-  left: 12px;
-	text-align: left;
-}
-.help-info-box:before{
-	content: '';
-	width: 0;
-	height: 0;
-	border: 6px solid transparent;
-	border-right: 8px solid rgba(0,0,0,0.4);
-	position: absolute;
-	top: -6px;
-  left: -2px;
-}
 .f5{
 	padding: 16px;
 	position: relative;
@@ -170,7 +130,7 @@ html,body{
 	width: 40px;
 	height: 40px;
 	border-radius: 100%;
-	background: url(../imgs/imgs2048/f5.png) no-repeat center;
+	background: url(../files/f5.png) no-repeat center;
 	background-size: 100%;
 	box-shadow: 0 5px 15px rgba(255,33,124,.4);
 }
@@ -210,7 +170,7 @@ html,body{
 	cursor: pointer;
 }
 @media screen and (max-width:960px){
-	.help-info,.ewm-box,.ewm-box-2{
+	.ewm-box,.ewm-box-2{
 		display: none;
 	}
 }

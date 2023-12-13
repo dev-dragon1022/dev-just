@@ -17,22 +17,6 @@
 		$(this).parents('#pop').remove();
 	});
 	
-	// 玩法显示隐藏
-	let hover_time, out_time; // 定义悬停和离开的延时量
-	$(".help-info").hover(function(){
-	    clearTimeout(out_time); // 清除离开的延时
-	    that = this; // 重定this指针
-	    hover_time = setTimeout(function(){
-	      $(that).next('.help-info-box').fadeIn(200);
-	    },300); // 定时鼠标悬停300ms后滑出
-	},function(){
-	    clearTimeout(hover_time); // 清除悬停的延时
-	    that = this; // 重定this指针
-	    out_time = setTimeout(function(){
-	      $(that).next('.help-info-box').fadeOut(200);
-	    },100); // 定时鼠标离开100ms后隐藏
-	});
-	
 	/* 开始摸鱼吧 */
 	var defaults = {
 		delay: 180 // 模块移动速度
@@ -112,6 +96,7 @@
 			if (emptyMatrix === 0) {
 				return;
 			}
+
 			// 随机产生新模块&index
 			var random = Math.floor(Math.random() * emptyMatrix + 1);
 			var chosenIndex = 0;
@@ -123,9 +108,12 @@
 					matrix[chosenIndex].taken = true;
 					break;
 				}
+				
 			}
 			// 创建
 			value = value ? value : (Math.floor(Math.random() * 4 + 1) === 4 ? 4 : 2);
+			// console.log(value);
+			// value = 1024;
 			var newBox = $('<div>').addClass('box').attr({
 				position: chosenIndex,
 				value: value
@@ -134,7 +122,7 @@
 				marginLeft: matrix[chosenIndex].left + 2,
 				opacity: 0
 			}).text(value).appendTo(content).animate({
-				opacity: 1
+				opacity: 1,
 			}, options.delay * 2);
 			// 推动合并
 			boxes.push(newBox);
@@ -166,6 +154,19 @@
 			});
 			boxes[source].remove();
 			boxes.splice(source, 1);
+			
+			if (_value === 2048) {
+					isGameOver = true;
+					// 2048win 弹窗
+					var pop = "<div id='pop' style='width:100%;height:100vh;position:fixed;top:0;left:0;background-color:rgba(0,0,0,.4);z-index:999;'>"+
+									"<div style='width:250px;height:201px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius: 8px;background:url(files/bg.png) no-repeat left bottom;background-size:100%;'>"+
+										"<div id='close' style='width:24px;height:24px;cursor:pointer;position:absolute;top:5px;right:5px;'><img style='width:100%;' src='files/close.png' alt='关闭'></div>"+
+										"<div style='width:100%;margin-top:30px;text-align:center;color:#FFFF00;text-shadow:0 5px 12px rgba(255,0,0,.7);font-size:30px;font-weight:bold;'>GAME WIN</div>"+
+										"<div id='start' onclick='javascript:location.reload();' style='width:160px;height:44px;line-height:44px;margin:35px auto;background-color:#00B837;color:#ffffff;font-size:20px;font-weight:bold;box-shadow: 0 5px 14px rgba(0,184,55,.4);text-align:center;border-radius: 8px;'>再玩一次</div>"+
+									"</div>"+
+								"</div>";
+					$('body').append(pop);
+			}
 		}
 
 		/**
@@ -200,7 +201,8 @@
 			}
 			return true;
 		}
-
+		
+		
 		/**
 		 * 开始游戏
 		 */
@@ -215,13 +217,13 @@
 				isGameOver = true;
 				// 游戏结束弹窗
 				var pop = "<div id='pop' style='width:100%;height:100vh;position:fixed;top:0;left:0;background-color:rgba(0,0,0,.4);z-index:999;'>"+
-								"<div style='width:250px;height:201px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius: 8px;background:url(../imgs/imgs2048/bg.png) no-repeat left bottom;background-size:100%;'>"+
-									"<div id='close' style='width:24px;height:24px;cursor:pointer;position:absolute;top:5px;right:5px;'><img style='width:100%;' src='../imgs/imgs2048/close.png' alt='关闭'></div>"+
+								"<div style='width:250px;height:201px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius: 8px;background:url(../files/bg.png) no-repeat left bottom;background-size:100%;'>"+
+									"<div id='close' style='width:24px;height:24px;cursor:pointer;position:absolute;top:5px;right:5px;'><img style='width:100%;' src='../files/close.png' alt='关闭'></div>"+
 									"<div style='width:100%;margin-top:30px;text-align:center;color:#FFFF00;text-shadow:0 5px 12px rgba(255,0,0,.7);font-size:30px;font-weight:bold;'>GAME OVER</div>"+
 									"<div id='start' onclick='javascript:location.reload();' style='width:160px;height:44px;line-height:44px;margin:35px auto;background-color:#00B837;color:#ffffff;font-size:20px;font-weight:bold;box-shadow: 0 5px 14px rgba(0,184,55,.4);text-align:center;border-radius: 8px;'>重新开始</div>"+
 								"</div>"+
 							"</div>";
-				$('body').append(pop);		
+				$('body').append(pop);
 			}
 		}
 
@@ -555,7 +557,6 @@
 						}
 					}
 				}
-
 			}
 			return isMoved;
 		}
