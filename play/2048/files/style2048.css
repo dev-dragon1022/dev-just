@@ -21,7 +21,7 @@ html,body{
 	background-color: #FA8BFF;
 	background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
 	position: absolute;
-	filter: blur(20px);
+	/* filter: blur(20px); */
 }
 .bg:before{
 	content: '';
@@ -215,6 +215,19 @@ html,body{
 }
 #start,#close{
 	cursor: pointer;
+}
+.footer-info{
+	position: fixed;
+	bottom: 30px;
+	z-index: 10;
+	color: #0256A4;
+	font-size: 12px;
+}
+.text-link{
+	cursor: pointer;
+	color: #0256A4;
+	text-decoration: none;
+	margin-left: 32px;
 }
 @media screen and (max-width:960px){
 	.ewm-box,.ewm-box-2{
