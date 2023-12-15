@@ -60,10 +60,10 @@
 				
 				// busuanzi统计
 				bszCaller.fetch("//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback",function(data) {
-					// 打印 site_pv 的值
+					// 打印统计的值
 					console.log("site_pv:", data.site_pv);
-					console.log("site_pv:", data.page_pv);
-					console.log("site_pv:", data.site_uv);
+					console.log("page_pv:", data.page_pv);
+					console.log("site_uv:", data.site_uv);
 				});
 			});
 		
