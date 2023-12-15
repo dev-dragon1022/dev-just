@@ -184,6 +184,7 @@
 					// 2048win 弹窗
 					var pop = "<div id='pop' style='width:100%;height:100vh;position:fixed;top:0;left:0;background-color:rgba(0,0,0,.4);z-index:999;'>"+
 									"<div style='width:250px;height:201px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius: 8px;background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);'>"+
+									"<div id='close' style='width:24px;height:24px;cursor:pointer;position:absolute;top:10px;right:10px;'><svg width='24' height='24' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z' fill='none' stroke='#ffffff' stroke-width='4' stroke-linejoin='round'/><path d='M29.6567 18.3432L18.343 29.6569' stroke='#ffffff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/><path d='M18.3433 18.3432L29.657 29.6569' stroke='#ffffff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/></svg></div>"+
 										"<div style='width:100%;margin-top:30px;text-align:center;color:#ffffff;text-shadow:0 5px 12px rgba(0,0,0,.3);font-size:36px;font-weight:bold;'>胜 利</div>"+
 										"<div id='start' onclick='javascript:location.reload();' style='width:160px;height:44px;line-height:44px;margin:35px auto;background-color:#00B837;color:#ffffff;font-size:20px;font-weight:bold;box-shadow: 0 5px 14px rgba(0,184,55,.4);text-align:center;border-radius: 8px;'>再玩一次</div>"+
 									"</div>"+
@@ -241,6 +242,7 @@
 				// 游戏结束弹窗
 				var pop = "<div id='pop' style='width:100%;height:100vh;position:fixed;top:0;left:0;background-color:rgba(0,0,0,.4);z-index:999;'>"+
 								"<div style='width:250px;height:201px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius: 8px;background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);'>"+
+								"<div id='close' style='width:24px;height:24px;cursor:pointer;position:absolute;top:10px;right:10px;'><svg width='24' height='24' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z' fill='none' stroke='#ffffff' stroke-width='4' stroke-linejoin='round'/><path d='M29.6567 18.3432L18.343 29.6569' stroke='#ffffff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/><path d='M18.3433 18.3432L29.657 29.6569' stroke='#ffffff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/></svg></div>"+
 									"<div style='width:100%;margin-top:30px;text-align:center;color:#ffffff;text-shadow:0 5px 12px rgba(0,0,0,.3);font-size:36px;font-weight:bold;'>失 败</div>"+
 									"<div id='start' onclick='javascript:location.reload();' style='width:160px;height:44px;line-height:44px;margin:35px auto;background-color:#FC9B43;color:#ffffff;font-size:20px;font-weight:bold;box-shadow: 0 5px 14px rgba(252,155,67,0.4);text-align:center;border-radius: 8px;'>重新开始</div>"+
 								"</div>"+
