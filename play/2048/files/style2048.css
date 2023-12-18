@@ -229,8 +229,36 @@ html,body{
 	text-decoration: none;
 	margin-left: 32px;
 }
+.arrow-box{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.arrow-box ul,.arrow-box li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.arrow3{
+	position: relative;
+	display: flex;
+	margin-top: 4px!important;
+}
+.arrow-box li{
+	width: 18px;
+	height: 18px;
+	background-color: #289672;
+	text-align: center;
+	line-height: 14px;
+	border: 2px solid #05EEA1;
+	box-shadow: 0 5px 8px rgba(0,0,0,0.2);
+	border-radius: 5px;
+	box-sizing: border-box;
+}
 @media screen and (max-width:960px){
-	.ewm-box,.ewm-box-2{
+	.ewm-box,.ewm-box-2,.arrow-box{
 		display: none;
 	}
 }
