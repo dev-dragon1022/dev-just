@@ -1,5 +1,5 @@
 # dev-just
-dev web site for just
+dev web site
 
 ### 设计师工作日常web站
 [设计师工作日常](https://www.liujueyi.cn)
