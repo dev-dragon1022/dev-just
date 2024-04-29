@@ -1,0 +1,23 @@
+.analysis-title{
+	width: 100%;
+	margin-top: 6.25rem;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+}
+.lab-title{
+	font-family: 'Noto Serif SC';
+	font-size: 2.5rem;
+	font-weight: 900;
+}
+.lab-item-info{
+	font-size: 0.875rem;
+	font-weight: 400;
+	color: var(--gray-color);
+	margin-top: 1rem;
+}
+.vip-box{
+	width: 75rem;
+	position: relative;
+	margin: 0 auto;
+}
