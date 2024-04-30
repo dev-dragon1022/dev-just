@@ -1,0 +1,120 @@
+.analysis-title{
+	width: 100%;
+	margin-top: 6.25rem;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+}
+.lab-title{
+	font-family: 'Noto Serif SC';
+	font-size: 2.5rem;
+	font-weight: 900;
+}
+.lab-item-info{
+	font-size: 0.875rem;
+	font-weight: 400;
+	color: var(--gray-color);
+	margin-top: 1rem;
+}
+.vip-box{
+	width: 75rem;
+	position: relative;
+	margin: 0 auto;
+}
+.inp-box{
+	width: 100%;
+	position: relative;
+	margin-top: 6.25rem;
+}
+#vip-line{
+	padding: 0 16px;
+	height: 42px;
+	line-height: 42px;
+	background-color: #ffffff;
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius);
+}
+.v-inp{
+	width: 37.5rem;
+	padding: 0 1rem;
+	margin: 0 1rem;
+	font-size: 0.875rem;
+	font-family: 'Noto Sans SC';
+	font-weight: 400;
+	height: 42px;
+	line-height: 42px;
+	background-color: #ffffff;
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius);
+}
+.v-play-btn{
+  width:140px;
+  height: 42px;
+  border:none;
+  border-radius: var(--border-radius);
+  background-color:transparent;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  cursor:pointer;
+}
+.v-play-btn::before{
+  content:"";
+  width:200px;
+  height:200px;
+  position:absolute;
+  background-color:#DE74CC;
+  background-image:linear-gradient(90deg,#37AFCA 20%,#DE74CC 50%,#F89C6C 80%);;
+  filter:blur(10px);
+  animation:eff63 4s linear infinite;
+}
+.v-play-btn::after{
+  content:attr(data-text);
+	width:140px;
+  font-size: 0.875rem;
+  font-family: 'Noto Sans SC';
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 2px;
+  height: 42px;
+  line-height: 42px;
+  position:absolute;
+  transition:all .3s linear;
+}
+@keyframes eff63{
+  from{
+  transform:rotate(0deg);
+	}
+	to{
+		transform:rotate(360deg);
+	}
+}
+.v-play-btn:hover::before{
+  width:140px;
+  height:140px;
+  filter:blur(20px);
+}
+.v-main{
+	width: 100%;
+	height: 40.5rem;
+	margin-top: 30px;
+	background-color: rgba(0,0,0,0.04);
+	border-radius: var(--border-radius);
+	position: relative;
+	align-items: center;
+	justify-content: center;
+}
+.v-info{
+	font-family: 'Noto Sans SC';
+	font-size: 0.875rem;
+	color: var(--second-color);
+}
+.v-info p{
+	line-height: 2;
+}
+.v-iframe{
+	display: none;
+	border-radius: var(--border-radius);
+}
