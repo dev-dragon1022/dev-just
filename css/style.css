@@ -83,7 +83,7 @@ nav a:last-child{
 }
 @keyframes blue-eff{
 	0%{
-		top: 10rem;
+		top: 15rem;
 		left: 3.75rem;
 	}
 	20%{
@@ -99,35 +99,36 @@ nav a:last-child{
 		left: 100rem;
 	}
 	100%{
-		top: 10rem;
+		top: 15rem;
 		left: 3.75rem;
 	}
 }
 .red-box::before{
 	background-color: #DE74CC;
 	top: 5rem;
+	left: auto;
 	right: 3.75rem;
 	animation: red-eff 14s linear infinite;
 }
 @keyframes red-eff{
 	0%{
-		top: 5rem;
+		top: 2rem;
 		right: 3.75rem;
 	}
 	20%{
-		top: 20rem;
-		right: 20rem;
+		top: 10rem;
+		right: 10rem;
 	}
 	40%{
-		top: 40rem;
-		right: 60rem;
+		top: 20rem;
+		right: 40rem;
 	}
 	60%{
-		top: 20rem;
-		right: 100rem;
+		top: 10rem;
+		right: 80rem;
 	}
 	100%{
-		top: 5rem;
+		top: 2rem;
 		right: 3.75rem;
 	}
 }
@@ -137,17 +138,17 @@ nav a:last-child{
 	font-size: 0.75rem;
 	color: var(--second-color);
 	position: relative;
-	padding: 2.5rem 3.75rem;
+	padding: 2.5rem 3.75rem 2.375rem;
 	background-color:#DE74CC;
 	background: linear-gradient(90deg, rgba(55, 175, 202, 0.1) 0%, rgba(222, 116, 204, 0.1) 52%, rgba(248, 156, 108, 0.1) 100%);
 	justify-content: space-between;
-	align-items: center;
 	box-sizing: border-box;
 }
 .about-info a{
 	color: var(--second-color);
 	cursor: pointer;
 	margin-right: 1.5rem;
+	position: relative;
 }
 .about-info a:last-child{
 	margin-right: 0;
@@ -159,6 +160,41 @@ nav a:last-child{
 }
 .about-info a:hover,.site-beian a:hover{
 	color: #DE74CC;
+}
+.gzh-pop{
+	background-color: #ffffff;
+	padding: 1rem;
+	border-radius: var(--border-radius);
+	position: absolute;
+	bottom: 34px;
+	left: -32px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.16);
+	z-index: 1;
+	animation: yeff 1.4s ease-in-out infinite;
+	display: none;
+}
+@keyframes yeff {
+	0%{
+		bottom: 34px;
+	}
+	50%{
+		bottom: 40px;
+	}
+	100%{
+		bottom: 34px;
+	}
+}
+.gzhimg{
+	width: 4.25rem;
+	font-size: 0;
+}
+.gzhtext{
+	font-family: 'Noto Sans SC';
+	font-weight: 400;
+	font-size: 0.75rem;
+	color: var(--second-color);
+	text-align: center;
+	margin-top: 0.5rem;
 }
 
 /** 实验page **/
@@ -198,7 +234,7 @@ nav a:last-child{
 		bottom:0px;
 	}
 	100%{
-		bottom:230px;
+		bottom:360px;
 		height:0;
 	}
 }
@@ -282,6 +318,7 @@ nav a:last-child{
 	font-family: 'Noto Serif SC';
 	font-size: 2.5rem;
 	font-weight: 900;
+	letter-spacing: 4px;
 }
 .test-title-info{
 	font-family: 'Noto Sans SC';
@@ -303,19 +340,45 @@ nav a:last-child{
 .web-pro-list{
 	width: 100%;
 	padding: 0 3.75rem;
+	flex-wrap: wrap;
+	margin-top: 3.75rem;
 }
 .web-pro-item{
-	width: calc(100% / 4);
+	width: calc((100% - 7.5rem) / 4);
 	height: 18.75rem;
 	position: relative;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	transition: background-color 0.3s linear;
+	transition: background-color 0.4s linear;
 	cursor: pointer;
 }
 .web-pro-item:hover{
 	background-color: rgba(248, 156, 108, 0.1);
+}
+.web-pro-logo{
+	width: 4.25rem;
+	height: 4.25rem;
+	position: relative;
+	border-radius: var(--border-radius);
+	overflow: hidden;
+}
+.web-pro-logo img{
+	width: 100%;
+}
+.web-pro-name{
+	font-family: 'Noto Sanc SC';
+	font-size: 1.125rem;
+	font-weight: 700;
+	color: var(--main-color);
+	margin-top: 1.875rem;
+}
+.web-pro-info{
+	font-family: 'Noto Sanc SC';
+	font-size: 0.875rem;
+	font-weight: 400;
+	color: var(--second-color);
+	margin-top: 1.5rem;
 }
 
 
