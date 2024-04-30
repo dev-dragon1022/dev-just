@@ -1,5 +1,4 @@
 // by Just. Liu
-// v0.0.1
 
 
 const app = Vue.createApp({	
