@@ -353,7 +353,7 @@ nav a:last-child{
 	transition: background-color 0.4s linear;
 	cursor: pointer;
 }
-.web-pro-item:hover,.dev-item:hover{
+.web-pro-item:hover{
 	background-color: rgba(248, 156, 108, 0.1);
 }
 .web-pro-logo{
@@ -444,11 +444,34 @@ nav a:last-child{
 	width: calc((100% - 10rem) / 4);
 	height: auto;
 	border-radius: var(--border-radius);
-	justify-content: center;
-	align-items: center;
 	background-color: rgba(0, 0, 0, 0.04);
 	margin: 0.625rem;
 	padding-bottom: 2.5rem;
+	z-index:0;
+	overflow: hidden;
+}
+.dev-item:before{
+  content:"";
+  width:0;
+  height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background-color: rgba(248, 156, 108, 0.1);
+  z-index:-1;
+  transition:all 0.3s linear;
+}
+.dev-item:hover:before{
+  width:100%;
+}
+.dev-item:after{
+	content: attr(data-num);
+	font-size: 10rem;
+	font-weight: 900;
+	color: rgba(121,151,203,0.1);
+	position: absolute;
+	top: -3rem;
+	right: -2rem;
 }
 .dev-item li{
 	width: 100%;
