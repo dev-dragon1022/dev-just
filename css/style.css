@@ -343,7 +343,7 @@ nav a:last-child{
 	flex-wrap: wrap;
 	margin-top: 3.75rem;
 }
-.web-pro-item{
+.web-pro-item,.dev-item{
 	width: calc((100% - 7.5rem) / 4);
 	height: 18.75rem;
 	position: relative;
@@ -353,7 +353,7 @@ nav a:last-child{
 	transition: background-color 0.4s linear;
 	cursor: pointer;
 }
-.web-pro-item:hover{
+.web-pro-item:hover,.dev-item:hover{
 	background-color: rgba(248, 156, 108, 0.1);
 }
 .web-pro-logo{
@@ -366,7 +366,7 @@ nav a:last-child{
 .web-pro-logo img{
 	width: 100%;
 }
-.web-pro-name{
+.web-pro-name,.dev-item-name{
 	font-family: 'Noto Sanc SC';
 	font-size: 1.125rem;
 	font-weight: 700;
@@ -379,6 +379,93 @@ nav a:last-child{
 	font-weight: 400;
 	color: var(--second-color);
 	margin-top: 1.5rem;
+}
+/** 前端 **/
+.banner-left-box{
+	width: 400px;
+	height: 400px;
+	position: relative;
+	box-sizing: border-box;
+	justify-content: center;
+	align-items: center;
+}
+.cube-box48{
+	/* padding: 128px 0; */
+  position:relative;
+  transform-style:preserve-3d;
+  animation:cube48-eff 4s linear infinite;
+}
+.cube48{
+  width:144px;
+  height:144px;
+  transform-style:preserve-3d;
+  transform:rotateX(35deg) rotateY(0deg) rotateZ(45deg);
+}
+.cube48 > div{
+  height:100%;
+  position:absolute;
+  width:100%;
+  border:1px solid rgba(255,255,255,0.7);
+}
+.cube48 div:nth-of-type(1){
+  background-color:rgba(55,175,202,0.4);
+  transform:translateZ(-72px) rotateY(180deg);
+}
+.cube48 div:nth-of-type(2){
+  background-color:rgba(222,116,204,0.4);
+  transform:rotateY(-270deg) translateX(50%);
+  transform-origin:top right;
+}
+.cube48 div:nth-of-type(3){
+  background-color:rgba(222,116,204,0.4);
+  transform:rotateY(270deg) translateX(-50%);
+  transform-origin:center left;
+}
+.cube48 div:nth-of-type(4){
+  background-color:rgba(248,156,108,0.4);
+  transform:rotateX(90deg) translateY(-50%);
+  transform-origin:top center;
+}
+.cube48 div:nth-of-type(5){
+  background-color:rgba(248,156,108,0.4);
+  transform:rotateX(-90deg) translateY(50%);
+  transform-origin:bottom center;
+}
+.cube48 div:nth-of-type(6){
+  background-color:rgba(55,175,202,0.4);
+  transform:translateZ(72px);
+}
+@keyframes cube48-eff{
+  100%{
+		transform:rotateY(360deg);
+	}
+}
+.dev-item{
+	width: calc((100% - 10rem) / 4);
+	height: auto;
+	border-radius: var(--border-radius);
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.04);
+	margin: 0.625rem;
+	padding-bottom: 2.5rem;
+}
+.dev-item li{
+	width: 100%;
+	padding: 0 2.5rem;
+	box-sizing: border-box;
+}
+.dev-item-name{
+	margin-top: 2.5rem;
+}
+.item-bottom-info{
+	justify-content: space-between;
+	color: var(--gray-color);
+	font-size: 0.75rem;
+	margin-top: 1.5rem;
+}
+.dev-item li.web-pro-info{
+	height: 3.5rem;
 }
 
 

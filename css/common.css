@@ -53,6 +53,9 @@ ul,li{
 .f14{
 	font-size: 0.875rem;
 }
+.lh2{
+	line-height: 2;
+}
 
 /* 滚动条样式 */
 ::-webkit-scrollbar {
