@@ -14,6 +14,7 @@ header{
 .logo-img{
 	width: 2.5rem;
 	position: relative;
+	font-size: 0;
 }
 .logo-img img{
 	width: 100%;
@@ -45,11 +46,63 @@ nav a:last-child{
 	top: -4px;
   right:0;
   bottom:0px;
-  transition:width 0.6s;
+  transition:width 0.3s linear;
 }
 .nav-a:hover:after{
   width:100%;
   left:0;
+}
+/*首页*/
+.index-box{
+	width: 100%;
+	height: calc( 100vh - 11.875rem);
+	overflow: hidden;
+	position: relative;
+}
+.index-content{
+	height: calc( 100vh - 11.6875rem);
+	display: flex;
+	overflow-x: auto;
+	overflow-y: hidden;
+	position: relative;
+}
+.index-page{
+	width: 100%;
+	position: relative;
+	flex-shrink: 0;
+	justify-content: center;
+	align-items: center;
+}
+.person-img{
+	width: 18.75rem;
+	height: 18.75rem;
+	border-radius: 50%;
+	position: relative;
+	box-sizing: border-box;
+	animation: index-eff1 2s ease-in-out infinite alternate;
+}
+@keyframes index-eff1{
+  0%{
+		border: 8px solid rgba(222,116,204,0);
+		box-shadow:0 0 0 rgba(222,116,204,0),0 0 0 rgba(222,116,204,0) inset;
+	}
+	100%{
+		border: 8px solid rgba(222,116,204,1);
+		box-shadow:0 0 30px rgba(222,116,204,0.7),0 0 16px rgba(222,116,204,0.5) inset;
+	}
+}
+.index-text-box{
+	margin-left: 6.25rem;
+}
+.index-title{
+	font-family: 'Noto Serif SC';
+	font-size: 2.5rem;
+	font-weight: 900;
+}
+.index-info{
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-top: 2.5rem;
 }
 /*通用蓝色玻璃*/
 .blue-box,.red-box{
