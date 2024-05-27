@@ -21,7 +21,7 @@ header{
 }
 .logo-name{
 	font-size: 1.125rem;
-	font-weight: 900;
+	font-weight: bold;
 	margin-left: 1.25rem;
 }
 nav a{
@@ -100,9 +100,43 @@ nav a:last-child{
 	font-weight: 900;
 }
 .index-info{
-	font-size: 1.25rem;
-	font-weight: 700;
+	font-size: 1rem;
+	font-weight: 400;
 	margin-top: 2.5rem;
+}
+.cursor27{
+  width: 28px;
+  height:40px;
+  border:2px solid #333333;
+  border-radius:14px;
+  box-sizing:border-box;
+  position: absolute;
+	top: 50%;
+	right: 3.75rem;
+	transform: translateY(-50%);
+	z-index: 10;
+}
+.ani-box27{
+  width:4px;
+  height:8px;
+  display:block;
+  position:absolute;
+  top:4px;
+  left:10px;
+  background-color:#333333;
+  border-radius:3px;
+  animation:moveeff27 2s ease-in-out infinite;
+}
+@keyframes moveeff27{
+  0%{
+		top:4px;
+	}
+	50%{
+		top:10px;
+	}
+	100%{
+		top:4px;
+	}
 }
 /*通用蓝色玻璃*/
 .blue-box,.red-box{
