@@ -52,92 +52,6 @@ nav a:last-child{
   width:100%;
   left:0;
 }
-/*首页*/
-.index-box{
-	width: 100%;
-	height: calc( 100vh - 11.875rem);
-	overflow: hidden;
-	position: relative;
-}
-.index-content{
-	height: calc( 100vh - 11.6875rem);
-	display: flex;
-	overflow-x: auto;
-	overflow-y: hidden;
-	position: relative;
-}
-.index-page{
-	width: 100%;
-	position: relative;
-	flex-shrink: 0;
-	justify-content: center;
-	align-items: center;
-}
-.person-img{
-	width: 18.75rem;
-	height: 18.75rem;
-	border-radius: 50%;
-	position: relative;
-	box-sizing: border-box;
-	animation: index-eff1 2s ease-in-out infinite alternate;
-}
-@keyframes index-eff1{
-  0%{
-		border: 8px solid rgba(222,116,204,0);
-		box-shadow:0 0 0 rgba(222,116,204,0),0 0 0 rgba(222,116,204,0) inset;
-	}
-	100%{
-		border: 8px solid rgba(222,116,204,1);
-		box-shadow:0 0 30px rgba(222,116,204,0.7),0 0 16px rgba(222,116,204,0.5) inset;
-	}
-}
-.index-text-box{
-	margin-left: 6.25rem;
-}
-.index-title{
-	font-family: 'Noto Serif SC';
-	font-size: 2.5rem;
-	font-weight: 900;
-}
-.index-info{
-	font-size: 1rem;
-	font-weight: 400;
-	margin-top: 2.5rem;
-}
-.cursor27{
-  width: 28px;
-  height:40px;
-  border:2px solid #333333;
-  border-radius:14px;
-  box-sizing:border-box;
-  position: absolute;
-	top: 50%;
-	right: 3.75rem;
-	transform: translateY(-50%);
-	z-index: 10;
-}
-.ani-box27{
-  width:4px;
-  height:8px;
-  display:block;
-  position:absolute;
-  top:4px;
-  left:10px;
-  background-color:#333333;
-  border-radius:3px;
-  animation:moveeff27 2s ease-in-out infinite;
-}
-@keyframes moveeff27{
-  0%{
-		top:4px;
-	}
-	50%{
-		top:10px;
-	}
-	100%{
-		top:4px;
-	}
-}
 /*通用蓝色玻璃*/
 .blue-box,.red-box{
 	width: 100%;
@@ -336,7 +250,7 @@ nav a:last-child{
   animation:spin52 4s linear infinite;
 }
 @keyframes spin52{
-  0{
+  0%{
 		transform:translateY(-10px) rotateY(0deg);
 	}
 	50%{
@@ -380,7 +294,7 @@ nav a:last-child{
   animation:spin52b 4s linear infinite;
 }
 @keyframes spin52b{
-  0{
+  0%{
 		transform:rotateX(180deg) translateY(-10px) rotateY(0deg);
 	}
 	50%{
@@ -665,6 +579,48 @@ nav a:last-child{
 .design-item:hover{
 	transform: translateY(-2px);
 	box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.class-tab{
+	width: 100%;
+	position: relative;
+	margin-top: 2.5rem;
+	justify-content: center;
+	align-items: center;
+}
+.tab-maker{
+	padding: 10px 16px;
+  border:none;
+  border-radius: 24px;
+  font-size: 18px;
+  text-align: center;
+  transition: all 0.24s linear;
+	margin: 0 1.25rem;
+}
+.tab-maker:hover,.tab-maker-cur{
+  cursor:pointer;
+  color:#fff;
+  background-color:#37AFCA;
+  animation: designeff 0.24s linear infinite;
+}
+@keyframes designeff{
+  0%{
+		transform:translate(0);
+	}
+	20%{
+		transform:translate(-3px,3px);
+	}
+	40%{
+		transform:translate(-2px,-3px);
+	}
+	60%{
+		transform:translate(3px,2px);
+	}
+	80%{
+		transform:translate(2px,-3px);
+	}
+	100%{
+		transform:translate(0);
+	}
 }
 
 

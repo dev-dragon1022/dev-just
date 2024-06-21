@@ -11,7 +11,7 @@
 	<link href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@400;700;900&display=swap"" rel="stylesheet">
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7227292961308738" crossorigin="anonymous"></script>
+	<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7227292961308738" crossorigin="anonymous"></script> -->
 </head>
 <body>
   <div id="app">
@@ -49,45 +49,20 @@
 					<li class="test-title-info">春有百花秋望月，夏有凉风冬听雪。</li>
 				</ul>
 			</div>
+			<div class="class-tab flex">
+				<ul class="flex">
+					<li class="tab-maker" :class="{ 'tab-maker-cur': designType === 0 && designClass === 0 }" @click="selectDesignTab(0, 0)"># 不就是美工嘛</li>
+					<li class="tab-maker" :class="{ 'tab-maker-cur': designType === 0 && designClass === 1 }" @click="selectDesignTab(0, 1)"># 设计日常</li>
+				</ul>
+			</div>
 			<div class="item-list flex">
-				<a class="design-item flex" href="https://whtool.liujueyi.cn/" target="_blank">
-					<li class="design-img-li"><img src="imgs/19.webp" alt="呼叫中心CRM解决方案" /></li>
-					<li class="dev-item-name">呼叫中心CRM解决方案</li>
+				<a v-for="item in designItems" :key="item.id" class="design-item flex" :href="item.link" target="_blank">
+					<li class="design-img-li"><img :src="'imgs/'+ item.img" :alt="item.title" /></li>
+					<li class="dev-item-name lh1-5">{{item.title}}</li>
 					<li class="item-bottom-info flex">
-						<span># UI - App</span>
-						<span><i class="i-dot"></i> 2023-3-17</span>
-					</li>
-				</a>
-				<a class="design-item flex" href="https://whtool.liujueyi.cn/" target="_blank">
-					<li class="design-img-li"><img src="imgs/19.webp" alt="呼叫中心CRM解决方案" /></li>
-					<li class="dev-item-name">呼叫中心CRM解决方案</li>
-					<li class="item-bottom-info flex">
-						<span># UI - App</span>
-						<span><i class="i-dot"></i> 2023-3-17</span>
-					</li>
-				</a>
-				<a class="design-item flex" href="https://whtool.liujueyi.cn/" target="_blank">
-					<li class="design-img-li"><img src="imgs/19.webp" alt="呼叫中心CRM解决方案" /></li>
-					<li class="dev-item-name">呼叫中心CRM解决方案</li>
-					<li class="item-bottom-info flex">
-						<span># UI - App</span>
-						<span><i class="i-dot"></i> 2023-3-17</span>
-					</li>
-				</a>
-				<a class="design-item flex" href="https://whtool.liujueyi.cn/" target="_blank">
-					<li class="design-img-li"><img src="imgs/19.webp" alt="呼叫中心CRM解决方案" /></li>
-					<li class="dev-item-name">呼叫中心CRM解决方案</li>
-					<li class="item-bottom-info flex">
-						<span># UI - App</span>
-						<span><i class="i-dot"></i> 2023-3-17</span>
-					</li>
-				</a>
-				<a class="design-item flex" href="https://whtool.liujueyi.cn/" target="_blank">
-					<li class="design-img-li"><img src="imgs/19.webp" alt="呼叫中心CRM解决方案" /></li>
-					<li class="dev-item-name">呼叫中心CRM解决方案</li>
-					<li class="item-bottom-info flex">
-						<span># UI - App</span>
-						<span><i class="i-dot"></i> 2023-3-17</span>
+						<span v-if="item.type === 0 && item.class === 0"># 不就是美工嘛</span>
+						<span v-if="item.type === 0 && item.class === 1"># 设计日常</span>
+						<span>{{item.time}}</span>
 					</li>
 				</a>
 			</div>
@@ -113,7 +88,7 @@
   </div>
 	<script src="https://cdn.bootcdn.net/ajax/libs/vue/3.3.4/vue.global.js"></script>
 	<script src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.6/axios.min.js"></script>
-	<script src="app.js"></script>
+	<script src="app.js?4d"></script>
 	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 	<script>
 		// 百度统计

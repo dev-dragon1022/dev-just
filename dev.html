@@ -56,53 +56,22 @@
 					<li class="test-title-info">陋室空空徒四壁，代码行行正铿锵。</li>
 				</ul>
 			</div>
+			<div class="class-tab flex">
+				<ul class="flex">
+					<li class="tab-maker" :class="{ 'tab-maker-cur': devType === 1 && devClass === 0 }" @click="selectDevTab(1, 0)"># 前端的诱惑</li>
+					<li class="tab-maker" :class="{ 'tab-maker-cur': devType === 1 && devClass === 1 }" @click="selectDevTab(1, 1)"># 有趣的css</li>
+					<li class="tab-maker" :class="{ 'tab-maker-cur': devType === 1 && devClass === 2 }" @click="selectDevTab(1, 2)"># 实用案例组件</li>
+				</ul>
+			</div>
 			<div class="item-list flex">
-				<a class="dev-item flex" href="https://whtool.liujueyi.cn/" target="_blank" data-num="68">
-					<li class="dev-item-name">水波纹按钮</li>
-					<li class="web-pro-info lh1-5">好看有质感的水波纹按钮，适用大的入口场景，比如 banner 详情入口等，醒目、容易被看到。</li>
+				<a v-for="item in devItems" :key="item.id" class="dev-item flex" :href="item.link" target="_blank" :data-num="item.id">
+					<li class="dev-item-name lh1-5">{{item.title}}</li>
+					<li class="web-pro-info lh1-5">{{item.info}}</li>
 					<li class="item-bottom-info flex">
-						<span># 有趣的css</span>
-						<span><i class="i-dot"></i> 2023-3-17</span>
-					</li>
-				</a>
-				<a class="dev-item flex" href="https://whtool.liujueyi.cn/" target="_blank" data-num="67">
-					<li class="dev-item-name">水波纹按钮</li>
-					<li class="web-pro-info lh1-5">好看有质感的水波纹按钮，适用大的入口场景，比如 banner 详情入口等，醒目、容易被看到。</li>
-					<li class="item-bottom-info flex">
-						<span># 有趣的css</span>
-						<span><i class="i-dot"></i> 2023-3-17</span>
-					</li>
-				</a>
-				<a class="dev-item flex" href="https://whtool.liujueyi.cn/" target="_blank" data-num="1">
-					<li class="dev-item-name">水波纹按钮</li>
-					<li class="web-pro-info lh1-5">好看有质感的水波纹按钮，适用大的入口场景，比如 banner 详情入口等，醒目、容易被看到。</li>
-					<li class="item-bottom-info flex">
-						<span># 有趣的css</span>
-						<span><i class="i-dot"></i> 2023-3-17</span>
-					</li>
-				</a>
-				<a class="dev-item flex" href="https://whtool.liujueyi.cn/" target="_blank" data-num="8">
-					<li class="dev-item-name">水波纹按钮</li>
-					<li class="web-pro-info lh1-5">好看有质感的水波纹按钮，适用大的入口场景，比如 banner 详情入口等，醒目、容易被看到。</li>
-					<li class="item-bottom-info flex">
-						<span># 有趣的css</span>
-						<span><i class="i-dot"></i> 2023-3-17</span>
-					</li>
-				</a>
-				<a class="dev-item flex" href="https://whtool.liujueyi.cn/" target="_blank" data-num="24">
-					<li class="dev-item-name">水波纹按钮</li>
-					<li class="web-pro-info lh1-5">好看有质感的水波纹按钮，适用大的入口场景，比如 banner 详情入口等，醒目、容易被看到。</li>
-					<li class="item-bottom-info flex">
-						<span># 有趣的css</span>
-						<span><i class="i-dot"></i> 2023-3-17</span>
-					</li>
-				</a>
-				<a class="dev-item flex" href="https://whtool.liujueyi.cn/" target="_blank" data-num="68">
-					<li class="dev-item-name">水波纹按钮</li>
-					<li class="web-pro-info lh1-5">好看有质感的水波纹按钮，适用大的入口场景，比如 banner 详情入口等，醒目、容易被看到。</li>
-					<li class="item-bottom-info flex">
-						<span># 有趣的css</span>
-						<span><i class="i-dot"></i> 2023-3-17</span>
+						<span v-if="item.type === 1 && item.class === 0"># 前端的诱惑</span>
+						<span v-if="item.type === 1 && item.class === 1"># 有趣的css</span>
+						<span v-if="item.type === 1 && item.class === 2"># 实用案例组件</span>
+						<span>{{item.time}}</span>
 					</li>
 				</a>
 			</div>
@@ -128,7 +97,7 @@
   </div>
 	<script src="https://cdn.bootcdn.net/ajax/libs/vue/3.3.4/vue.global.js"></script>
 	<script src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.6/axios.min.js"></script>
-	<script src="app.js"></script>
+	<script src="app.js?7yg"></script>
 	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 	<script>
 		// 百度统计
