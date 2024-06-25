@@ -453,6 +453,7 @@ nav a:last-child{
 	padding-bottom: 2.5rem;
 	z-index:0;
 	overflow: hidden;
+	position: relative;
 }
 .dev-item:before{
   content:"";
@@ -481,6 +482,23 @@ nav a:last-child{
 	width: 100%;
 	padding: 0 2.5rem;
 	box-sizing: border-box;
+}
+.info-img-box{
+	width: 100%;
+	position: absolute;
+	bottom: 2.375rem;
+	z-index: 10;
+	opacity: 0;
+	/* display: none; */
+	transition: all 0.3s linear;
+}
+.info-img{
+	font-size: 0;
+	width: 100%;
+}
+.dev-item:hover .info-img-box{
+	opacity: 1;
+	/* display: block; */
 }
 .dev-item-name{
 	margin-top: 2.5rem;
