@@ -46,6 +46,7 @@
 	background-color: #ffffff;
 	border: 1px solid var(--border-color);
 	border-radius: var(--border-radius);
+	box-sizing: border-box;
 }
 .v-play-btn{
   width:140px;
@@ -113,8 +114,47 @@
 }
 .v-info p{
 	line-height: 2;
+	word-break: break-word;
 }
 .v-iframe{
 	display: none;
 	border-radius: var(--border-radius);
+}
+@media screen and (max-width:768px){
+	.vip-box{
+		width: 24rem;
+	}
+	.inp-box{
+		flex-direction: column;
+	}
+	.vip-line,.v-inp{
+		width: 100%;
+	}
+	.v-inp{
+		margin: 1rem 0;
+	}
+	.v-info{
+		width: 16rem;
+	}
+}
+@media screen and (min-width: 769px) and (max-width:960px){
+	.vip-box{
+		width: 41rem;
+	}
+	.v-inp{
+		width: 21.5rem;
+	}
+	.v-info{
+		width: 30rem;
+	}
+}
+@media screen and (min-width: 961px) and (max-width:1024px){
+	.vip-box{
+		width: 53rem;
+	}
+}
+@media screen and (min-width: 1025px) and (max-width:1366px){
+	.vip-box{
+		width: 59rem;
+	}
 }

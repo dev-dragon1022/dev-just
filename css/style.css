@@ -342,6 +342,7 @@ nav a:last-child{
 	padding: 0 3.75rem;
 	flex-wrap: wrap;
 	margin-top: 3.75rem;
+	box-sizing: border-box;
 }
 .web-pro-item,.dev-item{
 	width: calc((100% - 7.5rem) / 4);
@@ -444,7 +445,7 @@ nav a:last-child{
 	}
 }
 .dev-item,.design-item{
-	width: calc((100% - 11.25rem) / 4);
+	width: calc((100% - 5rem) / 4);
 	height: auto;
 	border-radius: var(--border-radius);
 	background-color: rgba(0, 0, 0, 0.04);
@@ -503,6 +504,7 @@ li.info-img-box{
 .dev-item-name{
 	margin-top: 2.5rem;
 	height: 3.375rem;
+	overflow: hidden;
 }
 .item-bottom-info{
 	justify-content: space-between;
@@ -643,28 +645,50 @@ li.info-img-box{
 	}
 }
 
-
-
-
-
-
-
 /** 自适应 **/
 @media screen and (max-width:768px){
-	
+	.dev-item,.design-item,.web-pro-item{
+		width: 100%;
+	}
+	.tab-maker{
+		font-size: 14px;
+	}
+	.logo-name,.about-info{
+		display: none;
+	}
+	.footer{
+		justify-content: center;
+	}
 }
-/** 自适应 **/
 @media screen and (min-width: 769px) and (max-width:960px){
-	
+	.dev-item,.design-item,.web-pro-item{
+		width: 100%;
+	}
+	.tab-maker{
+		font-size: 14px;
+	}
+	.logo-name,.about-info{
+		display: none;
+	}
+	.footer{
+		justify-content: center;
+	}
 }
 @media screen and (min-width: 961px) and (max-width:1024px){
-	
+	.dev-item,.design-item{
+		width: calc((100% - 2.525rem) / 2);
+	}
+	.web-pro-item{
+		width: calc(100% / 2);
+	}
 }
-@media screen and (min-width: 1025px) and (max-width:1440px){
-	
-}
-@media screen and (min-width: 1441px) and (max-width:1680px){
-	
+@media screen and (min-width: 1025px) and (max-width:1680px){
+	.dev-item,.design-item{
+		width: calc((100% - 3.75rem) / 3);
+	}
+	.web-pro-item{
+		width: calc(100% / 3);
+	}
 }
 
 
