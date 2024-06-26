@@ -57,7 +57,7 @@
 			</div>
 			<div class="item-list flex">
 				<a v-for="item in designItems" :key="item.id" class="design-item flex" :href="item.link" target="_blank">
-					<li class="design-img-li"><img :src="'imgs/'+ item.img" :alt="item.title" /></li>
+					<li class="design-img-li"><img :src="item.img" :alt="item.title" /></li>
 					<li class="dev-item-name lh1-5">{{item.title}}</li>
 					<li class="item-bottom-info flex">
 						<span v-if="item.type === 0 && item.class === 0"># 不就是美工嘛</span>
