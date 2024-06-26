@@ -461,7 +461,7 @@ nav a:last-child{
   position:absolute;
   top:0;
   left:0;
-  background-color: rgba(248, 156, 108, 0.1);
+  background-color: rgba(248, 156, 108, 0.2);
   z-index:-1;
   transition:all 0.3s linear;
 }
@@ -482,22 +482,23 @@ nav a:last-child{
 	padding: 0 2.5rem;
 	box-sizing: border-box;
 }
-.info-img-box{
-	width: 100%;
+li.info-img-box{
+	width: 0;
 	position: absolute;
-	bottom: 2.375rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 	z-index: 10;
-	opacity: 0;
-	/* display: none; */
 	transition: all 0.3s linear;
+	overflow: hidden;
+	justify-content: center;
 }
-.info-img{
+.info-img-box img{
+	max-width: 100%;
 	font-size: 0;
-	width: 100%;
 }
 .dev-item:hover .info-img-box{
-	opacity: 1;
-	/* display: block; */
+	width: 100%;
 }
 .dev-item-name{
 	margin-top: 2.5rem;
@@ -511,6 +512,7 @@ nav a:last-child{
 }
 .dev-item li.web-pro-info{
 	height: 4rem;
+	overflow: hidden;
 }
 /** 设计 **/
 .design-animation-01,.design-animation-02,.design-animation-03{

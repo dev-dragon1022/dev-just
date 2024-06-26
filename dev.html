@@ -65,8 +65,8 @@
 			</div>
 			<div class="item-list flex">
 				<a v-for="item in devItems" :key="item.id" class="dev-item flex" :href="item.link" target="_blank" :data-num="item.id">
-					<li class="info-img-box" v-if="item.type === 1 && item.class === 1">
-							<img class="info-img" :src="item.img" :alt="item.title">
+					<li class="info-img-box flex" v-if="item.type === 1 && item.class === 1">
+							<img :src="item.img" :alt="item.title">
 					</li>
 					<li class="dev-item-name lh1-5">{{item.title}}</li>
 					<li class="web-pro-info lh1-5">{{item.info}}</li>

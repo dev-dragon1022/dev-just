@@ -1042,7 +1042,7 @@
 		"class": 0,
 	  "id": 103,
 		"img": "",
-	  "title": "一直可以正常 git push 代码，突然就不行了，提示端口22错误，访问超时！",
+	  "title": "正常 git push 代码时突然就报错，提示端口22错误，访问超时！",
 		"info": "github网站正常访问，但是git push代码报错，提示端口22错误，访问超时！怎么搞？",
 		"link": "https://mp.weixin.qq.com/s/Rep0iI7xpsm1oQf_-C8z7Q",
 	  "time": "2024-01-17"
