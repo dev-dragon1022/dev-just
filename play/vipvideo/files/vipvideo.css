@@ -4,6 +4,7 @@
 	position: relative;
 	flex-direction: column;
 	align-items: center;
+	box-sizing: border-box;
 }
 .lab-title{
 	font-family: 'Noto Serif SC';
@@ -20,6 +21,7 @@
 	width: 75rem;
 	position: relative;
 	margin: 0 auto;
+	box-sizing: border-box;
 }
 .inp-box{
 	width: 100%;
@@ -121,8 +123,14 @@
 	border-radius: var(--border-radius);
 }
 @media screen and (max-width:768px){
+	.lab-title{
+		font-size: 2.25rem;
+	}
+	.analysis-title{
+		padding: 0 1.875rem;
+	}
 	.vip-box{
-		width: 24rem;
+		width: 21rem;
 	}
 	.inp-box{
 		flex-direction: column;
@@ -135,6 +143,9 @@
 	}
 	.v-info{
 		width: 16rem;
+	}
+	.blue-box{
+		display: block;
 	}
 }
 @media screen and (min-width: 769px) and (max-width:960px){
