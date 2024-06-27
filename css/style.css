@@ -501,6 +501,18 @@ li.info-img-box{
 .dev-item:hover .info-img-box{
 	width: 100%;
 }
+li.money-tag{
+	width: 60px;
+	padding: 6px 10px;
+	font-size: 0.75rem;
+	color: #ffffff;
+	text-align: center;
+	background: var(--bg-gradient);
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
 .dev-item-name{
 	margin-top: 2.5rem;
 	height: 3.375rem;

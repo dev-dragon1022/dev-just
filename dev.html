@@ -68,6 +68,7 @@
 					<li class="info-img-box flex" v-if="item.type === 1 && item.class === 1">
 							<img :src="item.img" :alt="item.title">
 					</li>
+					<li class="money-tag" v-if="item.type === 1 && item.class === 2">付费</li>
 					<li class="dev-item-name lh1-5">{{item.title}}</li>
 					<li class="web-pro-info lh1-5">{{item.info}}</li>
 					<li class="item-bottom-info flex">
