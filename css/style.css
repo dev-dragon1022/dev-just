@@ -496,6 +496,7 @@ li.info-img-box{
 }
 .info-img-box img{
 	max-width: 100%;
+	width: 100%;
 	font-size: 0;
 }
 .dev-item:hover .info-img-box{
