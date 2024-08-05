@@ -1296,5 +1296,25 @@
 		"info": "纯 css 实现一个圆形金属质感按钮，适用于工业机械风格场景。",
 		"link": "https://mp.weixin.qq.com/s/cuJUgnxILOGPUJuNOgNFgA",
 	  "time": "2024-06-13"
+	},
+	{
+		"type": 1,
+		"class": 1,
+	  "id": 129,
+		"img": "https://gd-hbimg.huaban.com/61e7d4225869b5f6c4bfb1aea80478259a0df0ac53aa-zQZYf0",
+	  "title": "搜索输入框动效",
+		"info": "一个提升用户体验，有交互感的搜索输入框动效。",
+		"link": "https://mp.weixin.qq.com/s/HAsXCjwOP0SnGFCEyOu0EA",
+	  "time": "2024-07-16"
+	},
+	{
+		"type": 1,
+		"class": 1,
+	  "id": 130,
+		"img": "https://gd-hbimg.huaban.com/98ce147b9a97393f2dd507ad0da954edc0d4d93f14d39-nU15tk",
+	  "title": "日夜间切换开关",
+		"info": "适用于切换网页的日夜模式界面的开关按钮，图标的过渡动画可以增强用户的交互效果。",
+		"link": "https://mp.weixin.qq.com/s/zgy1MDiTbszJss8i_gucYQ",
+	  "time": "2024-07-31"
 	}
 ]
