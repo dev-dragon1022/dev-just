@@ -1316,5 +1316,15 @@
 		"info": "适用于切换网页的日夜模式界面的开关按钮，图标的过渡动画可以增强用户的交互效果。",
 		"link": "https://mp.weixin.qq.com/s/zgy1MDiTbszJss8i_gucYQ",
 	  "time": "2024-07-31"
+	},
+	{
+		"type": 1,
+		"class": 1,
+	  "id": 131,
+		"img": "https://gd-hbimg.huaban.com/3d09e693c99088e098d8504354d5201a110af061425c6-KKWSeT",
+	  "title": "代码瀑布加载动画",
+		"info": "使用动画属性，实现一个小尺寸的代码瀑布效果。",
+		"link": "https://mp.weixin.qq.com/s/6PBIYMrDEvIOUKUFERHOew",
+	  "time": "2024-08-06"
 	}
 ]
