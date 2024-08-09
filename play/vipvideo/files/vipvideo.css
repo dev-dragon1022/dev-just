@@ -18,10 +18,13 @@
 	margin-top: 1rem;
 }
 .vip-box{
+	width: 100%;
+	position: relative;
+}
+.vip-play{
 	width: 75rem;
 	position: relative;
 	margin: 0 auto;
-	box-sizing: border-box;
 }
 .inp-box{
 	width: 100%;
@@ -129,7 +132,7 @@
 	.analysis-title{
 		padding: 0 1.875rem;
 	}
-	.vip-box{
+	.vip-play{
 		width: 21rem;
 	}
 	.inp-box{
@@ -149,7 +152,7 @@
 	}
 }
 @media screen and (min-width: 769px) and (max-width:960px){
-	.vip-box{
+	.vip-play{
 		width: 41rem;
 	}
 	.v-inp{
@@ -160,12 +163,12 @@
 	}
 }
 @media screen and (min-width: 961px) and (max-width:1024px){
-	.vip-box{
+	.vip-play{
 		width: 53rem;
 	}
 }
 @media screen and (min-width: 1025px) and (max-width:1366px){
-	.vip-box{
+	.vip-play{
 		width: 59rem;
 	}
 }
