@@ -27,7 +27,7 @@
 				<a class="nav-a" href="test.html">实验</a>
 			</nav>
 		</header>
-		<section class="blue-box" style="padding-bottom: 6.25rem">
+		<!-- <section class="blue-box" style="padding-bottom: 6.25rem">
 			<div class="test-banner flex">
 				<div class="banner-left-box flex">
 					<div class="cube-box48">
@@ -48,7 +48,7 @@
 					</ul>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<section class="red-box" style="padding-bottom: 6.25rem">
 			<div class="web-pro-title flex">
 				<ul class="flex">
@@ -59,22 +59,17 @@
 			<div class="class-tab flex">
 				<ul class="flex">
 					<li class="tab-maker" :class="{ 'tab-maker-cur': devType === 1 && devClass === 0 }" @click="selectDevTab(1, 0)"># 前端的诱惑</li>
-					<li class="tab-maker" :class="{ 'tab-maker-cur': devType === 1 && devClass === 1 }" @click="selectDevTab(1, 1)"># 有趣的css</li>
-					<li class="tab-maker" :class="{ 'tab-maker-cur': devType === 1 && devClass === 2 }" @click="selectDevTab(1, 2)"># 实用案例组件</li>
+					<li class="tab-maker" :class="{ 'tab-maker-cur': devType === 1 && devClass === 1 }" @click="selectDevTab(1, 1)"># 实用案例组件</li>
 				</ul>
 			</div>
 			<div class="item-list flex">
 				<a v-for="item in devItems" :key="item.id" class="dev-item flex" :href="item.link" target="_blank" :data-num="item.id">
-					<li class="info-img-box flex" v-if="item.type === 1 && item.class === 1">
-							<img :src="item.img" :alt="item.title">
-					</li>
-					<li class="money-tag" v-if="item.type === 1 && item.class === 2">付费</li>
+					<li class="money-tag" v-if="item.type === 1 && item.class === 1">付费</li>
 					<li class="dev-item-name lh1-5">{{item.title}}</li>
 					<li class="web-pro-info lh1-5">{{item.info}}</li>
 					<li class="item-bottom-info flex">
 						<span v-if="item.type === 1 && item.class === 0"># 前端的诱惑</span>
-						<span v-if="item.type === 1 && item.class === 1"># 有趣的css</span>
-						<span v-if="item.type === 1 && item.class === 2"># 实用案例组件</span>
+						<span v-if="item.type === 1 && item.class === 1"># 实用案例组件</span>
 						<span>{{item.time}}</span>
 					</li>
 				</a
