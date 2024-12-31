@@ -658,6 +658,53 @@ li.money-tag{
 	}
 }
 
+/*推荐页*/
+.share-box{
+	max-width: 43.75rem;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 0 auto;
+	padding: 0 1rem;
+	box-sizing: border-box;
+}
+.share-item{
+	width: 100%;
+	position: relative;
+	flex-direction: column;
+}
+.share-title{
+	width: 100%;
+	padding: 2.5rem 0 1rem;
+	font-family: 'Noto Sanc SC';
+	font-size: 1.125rem;
+	font-weight: 700;
+	color: var(--main-color);
+}
+.share-name-info{
+	width: 100%;
+	font-family: 'Noto Sanc SC';
+	font-size: 0.875rem;
+	font-weight: 400;
+	color: var(--second-color);
+}
+.share-item p{
+	line-height: 1.5;
+	margin-top: 1rem;
+}
+.share-item p img{
+	width: 100%;
+	max-width: max-content;
+	font-size: 0;
+}
+.share-p-title{
+	text-align: center;
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin: 2rem 0 1rem!important;
+}
+
 /** 自适应 **/
 @media screen and (max-width:768px){
 	header{
