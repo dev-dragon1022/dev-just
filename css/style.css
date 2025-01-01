@@ -68,7 +68,7 @@ nav a:last-child{
 	top: 15rem;
 	left: 3.75rem;
 	z-index: -2;
-	animation: blue-eff 14s linear infinite;
+	/* animation: blue-eff 14s linear infinite; */
 }
 .blue-box::after,.red-box::after{
 	content: '';
@@ -108,7 +108,7 @@ nav a:last-child{
 	top: 5rem;
 	left: auto;
 	right: 3.75rem;
-	animation: red-eff 14s linear infinite;
+	/* animation: red-eff 14s linear infinite; */
 }
 @keyframes red-eff{
 	0%{
