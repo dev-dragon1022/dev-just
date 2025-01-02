@@ -30,26 +30,15 @@
 		</header>
 		<!-- <section class="blue-box" style="padding-bottom: 6.25rem">
 			<div class="test-banner flex">
-				<div class="cube-box52">
-					<div class="cube52">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-					<div class="cube52">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
+				<div class="banner-left-box flex">
+					<div class="design-animation-01"></div>
+					<div class="design-animation-02" style="margin: 0 2rem;"></div>
+					<div class="design-animation-03"></div>
 				</div>
 				<div class="test-title flex">
 					<ul class="flex">
-						<li class="test-title-name">实验</li>
-						<li class="test-title-info">苟日新，日日新，又日新。</li>
+						<li class="test-title-name">设计</li>
+						<li class="test-title-info">书痴者文必工，艺痴者技必良。</li>
 					</ul>
 				</div>
 			</div>
@@ -57,35 +46,24 @@
 		<section class="red-box" style="padding-bottom: 6.25rem">
 			<div class="web-pro-title flex">
 				<ul class="flex">
-					<li class="test-title-name">Web H5。</li>
-					<li class="test-title-info">纸上得来终觉浅，绝知此事要躬行。</li>
+					<li class="test-title-name">一点自己的Talk。</li>
+					<li class="test-title-info">躲进小楼成一统，管他冬夏和春秋。</li>
 				</ul>
 			</div>
-			<div class="web-pro-list flex">
-				<a class="web-pro-item flex" href="https://whtool.liujueyi.cn/" target="_blank">
-					<li class="web-pro-logo"><img src="imgs/whtool.webp" alt="whtool" /></li>
-					<li class="web-pro-name">WHTOOL - 宽高比例计算工具</li>
-					<li class="web-pro-info lh1-5">一款计算图片宽度和高度的辅助设计师的在线工具</li>
-				</a>
-				<a class="web-pro-item flex" href="https://funcss.liujueyi.cn/" target="_blank">
-					<li class="web-pro-logo"><img src="imgs/funcss.webp" alt="funcss" /></li>
-					<li class="web-pro-name">FUNCSS - 有趣的css</li>
-					<li class="web-pro-info lh1-5">一个关于 CSS 的案例展示和分享平台</li>
-				</a>
-				<a class="web-pro-item flex" href="play/2048/2048game.html" target="_blank">
-					<li class="web-pro-logo"><img src="imgs/2048.webp" alt="2048" /></li>
-					<li class="web-pro-name">2048 - 摸鱼小游戏</li>
-					<li class="web-pro-info lh1-5">曾今很火的2048小游戏网页版</li>
-				</a>
-				<a class="web-pro-item flex" href="https://appshare.liujueyi.cn/" target="_blank">
-					<li class="web-pro-logo"><img src="imgs/designshare.webp" alt="设计师工作软件" /></li>
-					<li class="web-pro-name">设计师工作软件</li>
-					<li class="web-pro-info lh1-5">设计师常用工作软件分享平台</li>
-				</a>
-				<a class="web-pro-item flex" href="play/vipvideo/vipvideo.html" target="_blank">
-					<li class="web-pro-logo"><img src="imgs/vip-v.webp" alt="视频解析工具" /></li>
-					<li class="web-pro-name">视频解析工具 - 在线看vip视频</li>
-					<li class="web-pro-info lh1-5">免费在线观看vip视频</li>
+			<!-- <div class="class-tab flex">
+				<ul class="flex">
+					<li class="tab-maker" :class="{ 'tab-maker-cur': designType === 0 && designClass === 0 }" @click="selectDesignTab(0, 0)"># 不就是美工嘛</li>
+					<li class="tab-maker" :class="{ 'tab-maker-cur': designType === 0 && designClass === 1 }" @click="selectDesignTab(0, 1)"># 设计日常</li>
+				</ul>
+			</div> -->
+			<div class="item-list flex">
+				<a class="dev-item flex" href="share/share-1-1.html" target="_blank" data-num="52">
+					<li class="dev-item-name lh1-5">好用的机场推荐（本人力荐）- 已使用一年</li>
+					<li class="web-pro-info lh1-5">推荐一个好用的机场，个人用觉得非常nice！价格比较合理，也不卡不掉线，还送一个影视媒体库。</li>
+					<li class="item-bottom-info flex">
+						<span># 我说</span>
+						<span>2024-12-31</span>
+					</li>
 				</a>
 			</div>
 		</section>
@@ -110,7 +88,7 @@
   </div>
 	<script src="https://funcss.liujueyi.cn/vue3.2.22/vue.global.min.js"></script>
 	<script src="https://funcss.liujueyi.cn/axios1.3.6/axios.min.js"></script>
-	<script src="app.js"></script>
+	<script src="app.js?4d"></script>
 	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 	<script>
 		// 百度统计
