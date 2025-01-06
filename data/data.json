@@ -536,5 +536,25 @@
 		"info": "",
 		"link": "https://mp.weixin.qq.com/s/kOjlyCGgjKlNSxTosjeGzA",
 	  "time": "2024-01-31"
+	},
+	{
+		"type": 0,
+		"class": 0,
+	  "id": 52,
+		"img": "https://cdnimg.liujueyi.cn/picgoimg/20250106103924583.webp",
+	  "title": "企业官网设计",
+		"info": "",
+		"link": "https://www.zcool.com.cn/work/ZNzA2NTk3MTI=.html",
+	  "time": "2024-10-29"
+	},
+	{
+		"type": 1,
+		"class": 0,
+	  "id": 53,
+		"img": "",
+	  "title": "外链图又挂了，怎么办？用github+picgo搭建一个自己的图床，再也不用担心网站图又挂了！",
+		"info": "如果你经常用到需要外链的图，那么久可以自主搭建一个 github 图床，然后通过 picgo 上传图片。",
+		"link": "https://mp.weixin.qq.com/s/1OMBZIph0Cg-ATDCLdqryQ",
+	  "time": "2025-01-06"
 	}
 ]
