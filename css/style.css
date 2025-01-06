@@ -132,6 +132,12 @@ nav a:last-child{
 		right: 3.75rem;
 	}
 }
+.ads-box{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .footer{
 	width: 100%;
 	font-family: 'Noto Serif SC';
