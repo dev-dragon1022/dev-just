@@ -556,5 +556,15 @@
 		"info": "如果你经常用到需要外链的图，那么久可以自主搭建一个 github 图床，然后通过 picgo 上传图片。",
 		"link": "https://mp.weixin.qq.com/s/1OMBZIph0Cg-ATDCLdqryQ",
 	  "time": "2025-01-06"
+	},
+	{
+		"type": 1,
+		"class": 0,
+	  "id": 54,
+		"img": "",
+	  "title": "vue插入script标签警告“Tags with side effect (＜script＞ and ＜style＞...",
+		"info": "怎么在 Vue 页面中正确引入 script 标签或者 style 标签",
+		"link": "",
+	  "time": "2025-05-07"
 	}
 ]
